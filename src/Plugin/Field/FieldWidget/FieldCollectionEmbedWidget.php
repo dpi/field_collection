@@ -104,9 +104,8 @@ class FieldCollectionEmbedWidget extends WidgetBase {
   protected function formMultipleElements(FieldItemListInterface $items, array &$form, FormStateInterface $form_state) {
     // We don't want to render empty items on field collection fields
     // unless a) the field collection is empty ; b) the form is rebuilding,
-    // which means that the user clicked on "Add another item"; or
-    // c) we are creating a new entity.
-    if ((count($items) > 0) && !$form_state->isRebuilding() && !$items->getEntity()->isNew()) {
+    // which means that the user clicked on "Add another item"
+    if ((count($items) > 0) && !$form_state->isRebuilding()) {
       $field_name = $this->fieldDefinition->getName();
       $cardinality = $this->fieldDefinition->getFieldStorageDefinition()->getCardinality();
       $parents = $form['#parents'];
