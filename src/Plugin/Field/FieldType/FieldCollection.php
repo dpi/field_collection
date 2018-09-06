@@ -49,9 +49,9 @@ class FieldCollection extends EntityReferenceItem {
    * {@inheritdoc}
    */
   public static function defaultStorageSettings() {
-    return array(
+    return [
       'target_type' => 'field_collection_item',
-    ) + parent::defaultStorageSettings();
+    ] + parent::defaultStorageSettings();
   }
 
   /**
@@ -110,7 +110,7 @@ class FieldCollection extends EntityReferenceItem {
    * collections so override the settings form with a blank one.
    */
   public function storageSettingsForm(array &$form, FormStateInterface $form_state, $has_data) {
-    return array();
+    return [];
   }
 
   /**
@@ -123,7 +123,7 @@ class FieldCollection extends EntityReferenceItem {
 
     $form['handler']['#access'] = FALSE;
     $form['handler']['handler_settings']['target_bundles']['#access'] = FALSE;
-    $form['handler']['handler_settings']['target_bundles']['#default_value'] = array($this->getFieldDefinition()->getName() => $this->getFieldDefinition()->getName());
+    $form['handler']['handler_settings']['target_bundles']['#default_value'] = [$this->getFieldDefinition()->getName() => $this->getFieldDefinition()->getName()];
     $form['handler']['handler_settings']['auto_create']['#access'] = FALSE;
     $form['handler']['handler']['#access'] = FALSE;
     $form['handler']['handler_settings']['sort']['field']['#access'] = FALSE;
@@ -282,7 +282,7 @@ class FieldCollection extends EntityReferenceItem {
    * other than FieldCollectionItems.
    */
   public static function getPreconfiguredOptions() {
-    return array();
+    return [];
   }
 
 }
