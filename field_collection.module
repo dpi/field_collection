@@ -48,11 +48,12 @@ function field_collection_field_storage_config_insert(FieldStorageConfigInterfac
       $field_collection->save();
     }
 
-    // TODO: entity_invoke_bundle_hook in post save like in nodeType ?
+    /**
+     * @todo entity_invoke_bundle_hook in post save like in nodeType ?
+     * Clear caches.
+     */
 
-    // Clear caches.
     //entity_info_cache_clear();
-
     // Do not directly issue menu rebuilds here to avoid potentially multiple
     // rebuilds. Instead, let menu_get_item() issue the rebuild on the next
     // request.

@@ -9,8 +9,11 @@ use Drupal\Core\Entity\EntityInterface;
  * Provides a listing of field collections.
  */
 class FieldCollectionListBuilder extends ConfigEntityListBuilder {
-  // TODO: Add "Used in" column
-  // $rows[$field_name]['data'][2] = l(t('manage fields'), 'admin/structure/field-collections/' . $field_name_url_str . '/fields');
+
+  /**
+   * @todo Add "Used in" column
+   * $rows[$field_name]['data'][2] = l(t('manage fields'), 'admin/structure/field-collections/' . $field_name_url_str . '/fields');
+   */
 
   /**
    * {@inheritdoc}

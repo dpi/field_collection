@@ -2,7 +2,7 @@
 
 /**
  * @file
- * Contains API documentation and examples for the Field collection module.
+ * Contains API documentation and examples for the Field collection.
  */
 
 /**
@@ -16,7 +16,7 @@
  * This hook allows modules to determine whether a field collection is empty
  * before it is saved.
  *
- * @param boolean $is_empty
+ * @param bool $is_empty
  *   Whether or not the field should be considered empty.
  * @param \Drupal\field_collection\Entity\FieldCollectionItem $item
  *   The field collection we are currently operating on.

@@ -7,10 +7,12 @@ use Drupal\field_collection\Entity\FieldCollectionItem;
 use Drupal\node\Entity\Node;
 use Drupal\Tests\BrowserTestBase;
 
-// TODO: Test field collections with no fields or with no data in their fields
-//       once it's determined what is a good behavior for that situation.
-//       Unless something is changed the Entity and the field entry for it
-//       won't get created unless some data exists in it.
+/**
+ * @todo Test field collections with no fields or with no data in their fields
+ * once it's determined what is a good behavior for that situation.
+ * Unless something is changed the Entity and the field entry for it
+ * won't get created unless some data exists in it.
+ */
 
 /**
  * Test basics.
