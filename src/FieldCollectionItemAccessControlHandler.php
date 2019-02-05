@@ -18,7 +18,7 @@ class FieldCollectionItemAccessControlHandler extends EntityAccessControlHandler
     if (!$result->isForbidden()) {
       $host = $entity->getHost();
 
-      if (NULL !== $host) {
+      if (NULL !== $host && !empty(method_exists($host, 'access'))) {
         return $host->access($operation, $account, TRUE);
       }
       // Here we will be if host entity was not set and entity is not new.
