@@ -26,7 +26,6 @@ class FieldCollectionListFormatter extends FieldCollectionLinksFormatter {
    */
   public function viewElements(FieldItemListInterface $items, $langcode) {
     $element = [];
-    $settings = $this->getFieldSettings();
     $count = 0; // TODO: Is there a better way to get an accurate count of the
                 // items from the FieldItemList that doesn't count blank items?
                 // Possibly \Countable->count()?

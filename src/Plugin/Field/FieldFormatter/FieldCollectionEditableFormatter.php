@@ -23,7 +23,7 @@ class FieldCollectionEditableFormatter extends FieldCollectionLinksFormatter {
     $count = 0; // TODO: Is there a better way to get an accurate count of the
                 // items from the FileItemList that doesn't count blank items?
     $render_items = [];
-    foreach ($items as $delta => $item) {
+    foreach ($items as $item) {
       if ($item->target_id !== NULL) {
         $count++;
         $to_render = \Drupal::entityTypeManager()->getViewBuilder('field_collection_item')->view($item->getFieldCollectionItem());
